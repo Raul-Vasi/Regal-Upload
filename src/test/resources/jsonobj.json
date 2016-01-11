@@ -1,0 +1,411 @@
+{
+  "@id" : "frl:6376984",
+  "P1053" : [ "35 S." ],
+  "accessScheme" : "public",
+  "catalogId" : "ED6376984",
+  "contentType" : "journal",
+  "contributor" : [ {
+    "prefLabel" : "Länderausschuss für Arbeitsschutz und Sicherheitstechnik",
+    "@id" : "http://d-nb.info/gnd/2149408-3"
+  } ],
+  "contributorLabel" : [ "Höfer, Ursula" ],
+  "describedby" : [ {
+    "prefLabel" : "frl:6376984/about",
+    "@id" : "frl:6376984/about"
+  } ],
+  "doi" : "10.4126/FRL01-005826440",
+  "exemplar" : [ {
+    "prefLabel" : "http://lobid.org/item/HT018418282:DE-38M:Elektronische%20Publikation",
+    "@id" : "http://lobid.org/item/HT018418282:DE-38M:Elektronische%20Publikation"
+  } ],
+  "externalParent" : [ {
+    "prefLabel" : "LASI-Veröffentlichungen",
+    "@id" : "http://lobid.org/resource/HT017720789"
+  } ],
+  "hasPart" : [ {
+    "frl:6376983" : {
+      "@id" : "frl:6376983",
+      "accessScheme" : "public",
+      "catalogId" : "ED6376983",
+      "contentType" : "volume",
+      "hasPart" : [ {
+        "frl:6376985" : {
+          "@id" : "frl:6376985",
+          "accessScheme" : "public",
+          "catalogId" : "ED6376985",
+          "contentType" : "issue",
+          "hasPart" : [ {
+            "frl:6376986" : {
+              "@id" : "frl:6376986",
+              "accessScheme" : "public",
+              "catalogId" : "ED6376986",
+              "contentType" : "file",
+              "fulltext-ocr" : "",
+              "hasData" : {
+                "@id" : "frl:6376986/data",
+                "checksum" : {
+                  "checksumValue" : "cf3b256ccf6e6ba904eb79843e2612ce",
+                  "generator" : "http://en.wikipedia.org/wiki/MD5",
+                  "type" : "http://downlode.org/Code/RDF/File_Properties/schema#Checksum"
+                },
+                "fileLabel" : "test mit leerzeichen.pdf",
+                "format" : "application/pdf",
+                "size" : 5522833
+              },
+              "isDescribedBy" : {
+                "@id" : "frl:6376986.rdf",
+                "created" : "2015-11-19T09:57:55.170+0000",
+                "createdBy" : "1",
+                "describes" : "frl:6376986",
+                "modified" : "2015-11-23T15:07:35.039+0000",
+                "name" : "frl:6376986",
+                "objectTimestamp" : "2015-11-19T09:57:55.000+0000"
+              },
+              "isMemberOf" : [ {
+                "prefLabel" : "info:fedora/oai:open_access",
+                "@id" : "info:fedora/oai:open_access"
+              }, {
+                "prefLabel" : "info:fedora/oai:file",
+                "@id" : "info:fedora/oai:file"
+              } ],
+              "itemID" : [ {
+                "prefLabel" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376986",
+                "@id" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376986"
+              } ],
+              "parentPid" : "frl:6376985",
+              "primaryTopic" : "frl:6376986",
+              "publishScheme" : "public",
+              "title" : [ "2.1.1" ],
+              "transformer" : [ ],
+              "type" : [ {
+                "pref" : "http://purl.org/dc/terms/BibliographicResource",
+                "@id" : "http://purl.org/dc/terms/BibliographicResource"
+              } ]
+            }
+          }, {
+            "frl:6376987" : {
+              "@id" : "frl:6376987",
+              "accessScheme" : "public",
+              "catalogId" : "ED6376987",
+              "contentType" : "file",
+              "fulltext-ocr" : "",
+              "hasData" : {
+                "@id" : "frl:6376987/data",
+                "checksum" : {
+                  "checksumValue" : "cf3b256ccf6e6ba904eb79843e2612ce",
+                  "generator" : "http://en.wikipedia.org/wiki/MD5",
+                  "type" : "http://downlode.org/Code/RDF/File_Properties/schema#Checksum"
+                },
+                "fileLabel" : "test mit leerzeichen.pdf",
+                "format" : "application/pdf",
+                "size" : 5522833
+              },
+              "isDescribedBy" : {
+                "@id" : "frl:6376987.rdf",
+                "created" : "2015-11-19T09:58:27.972+0000",
+                "createdBy" : "1",
+                "describes" : "frl:6376987",
+                "modified" : "2015-11-23T15:08:01.528+0000",
+                "name" : "frl:6376987",
+                "objectTimestamp" : "2015-11-19T09:58:27.000+0000"
+              },
+              "isMemberOf" : [ {
+                "prefLabel" : "info:fedora/oai:open_access",
+                "@id" : "info:fedora/oai:open_access"
+              }, {
+                "prefLabel" : "info:fedora/oai:file",
+                "@id" : "info:fedora/oai:file"
+              } ],
+              "itemID" : [ {
+                "prefLabel" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376987",
+                "@id" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376987"
+              } ],
+              "parentPid" : "frl:6376985",
+              "primaryTopic" : "frl:6376987",
+              "publishScheme" : "public",
+              "title" : [ "2.1.2" ],
+              "transformer" : [ ],
+              "type" : [ {
+                "pref" : "http://purl.org/dc/terms/BibliographicResource",
+                "@id" : "http://purl.org/dc/terms/BibliographicResource"
+              } ]
+            }
+          } ],
+          "isDescribedBy" : {
+            "@id" : "frl:6376985.rdf",
+            "created" : "2015-11-19T09:57:38.180+0000",
+            "createdBy" : "1",
+            "describes" : "frl:6376985",
+            "modified" : "2015-11-23T15:08:02.354+0000",
+            "name" : "frl:6376985",
+            "objectTimestamp" : "2015-11-19T09:58:27.000+0000"
+          },
+          "isMemberOf" : [ {
+            "prefLabel" : "info:fedora/oai:open_access",
+            "@id" : "info:fedora/oai:open_access"
+          }, {
+            "prefLabel" : "info:fedora/oai:issue",
+            "@id" : "info:fedora/oai:issue"
+          } ],
+          "itemID" : [ {
+            "prefLabel" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376985",
+            "@id" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376985"
+          } ],
+          "parentPid" : "frl:6376983",
+          "primaryTopic" : "frl:6376985",
+          "publishScheme" : "public",
+          "title" : [ "2.1" ],
+          "transformer" : [ ],
+          "type" : [ {
+            "pref" : "http://purl.org/dc/terms/BibliographicResource",
+            "@id" : "http://purl.org/dc/terms/BibliographicResource"
+          } ]
+        }
+      }, {
+        "frl:6376988" : {
+          "@id" : "frl:6376988",
+          "accessScheme" : "public",
+          "catalogId" : "ED6376988",
+          "contentType" : "issue",
+          "hasPart" : [ {
+            "frl:6376990" : {
+              "@id" : "frl:6376990",
+              "accessScheme" : "public",
+              "catalogId" : "ED6376990",
+              "contentType" : "file",
+              "fulltext-ocr" : "",
+              "hasData" : {
+                "@id" : "frl:6376990/data",
+                "checksum" : {
+                  "checksumValue" : "132f57ceaa60bddbcdfe80bf40c9fa33",
+                  "generator" : "http://en.wikipedia.org/wiki/MD5",
+                  "type" : "http://downlode.org/Code/RDF/File_Properties/schema#Checksum"
+                },
+                "fileLabel" : "User+Handbuch+-+Regal+Drupal.pdf",
+                "format" : "application/pdf",
+                "size" : 618717
+              },
+              "isDescribedBy" : {
+                "@id" : "frl:6376990.rdf",
+                "created" : "2015-11-19T10:00:33.369+0000",
+                "createdBy" : "1",
+                "describes" : "frl:6376990",
+                "modified" : "2015-11-23T15:08:19.985+0000",
+                "name" : "frl:6376990",
+                "objectTimestamp" : "2015-11-19T10:00:33.000+0000"
+              },
+              "isMemberOf" : [ {
+                "prefLabel" : "info:fedora/oai:open_access",
+                "@id" : "info:fedora/oai:open_access"
+              }, {
+                "prefLabel" : "info:fedora/oai:file",
+                "@id" : "info:fedora/oai:file"
+              } ],
+              "itemID" : [ {
+                "prefLabel" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376990",
+                "@id" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376990"
+              } ],
+              "parentPid" : "frl:6376988",
+              "primaryTopic" : "frl:6376990",
+              "publishScheme" : "public",
+              "title" : [ "2.2" ],
+              "transformer" : [ ],
+              "type" : [ {
+                "pref" : "http://purl.org/dc/terms/BibliographicResource",
+                "@id" : "http://purl.org/dc/terms/BibliographicResource"
+              } ]
+            }
+          } ],
+          "isDescribedBy" : {
+            "@id" : "frl:6376988.rdf",
+            "created" : "2015-11-19T09:59:20.739+0000",
+            "createdBy" : "1",
+            "describes" : "frl:6376988",
+            "modified" : "2015-11-23T15:08:20.626+0000",
+            "name" : "frl:6376988",
+            "objectTimestamp" : "2015-11-19T10:00:33.000+0000"
+          },
+          "isMemberOf" : [ {
+            "prefLabel" : "info:fedora/oai:open_access",
+            "@id" : "info:fedora/oai:open_access"
+          }, {
+            "prefLabel" : "info:fedora/oai:issue",
+            "@id" : "info:fedora/oai:issue"
+          } ],
+          "itemID" : [ {
+            "prefLabel" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376988",
+            "@id" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376988"
+          } ],
+          "parentPid" : "frl:6376983",
+          "primaryTopic" : "frl:6376988",
+          "publishScheme" : "public",
+          "title" : [ "2.2" ],
+          "transformer" : [ ],
+          "type" : [ {
+            "pref" : "http://purl.org/dc/terms/BibliographicResource",
+            "@id" : "http://purl.org/dc/terms/BibliographicResource"
+          } ]
+        }
+      } ],
+      "isDescribedBy" : {
+        "@id" : "frl:6376983.rdf",
+        "created" : "2015-11-19T09:56:46.641+0000",
+        "createdBy" : "1",
+        "describes" : "frl:6376983",
+        "modified" : "2015-11-23T15:08:21.451+0000",
+        "name" : "frl:6376983",
+        "objectTimestamp" : "2015-11-19T10:00:33.000+0000"
+      },
+      "isMemberOf" : [ {
+        "prefLabel" : "info:fedora/oai:open_access",
+        "@id" : "info:fedora/oai:open_access"
+      }, {
+        "prefLabel" : "info:fedora/oai:volume",
+        "@id" : "info:fedora/oai:volume"
+      } ],
+      "itemID" : [ {
+        "prefLabel" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376983",
+        "@id" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376983"
+      } ],
+      "parentPid" : "frl:6376984",
+      "primaryTopic" : "frl:6376983",
+      "publishScheme" : "public",
+      "title" : [ "2" ],
+      "transformer" : [ ],
+      "type" : [ {
+        "pref" : "http://purl.org/dc/terms/BibliographicResource",
+        "@id" : "http://purl.org/dc/terms/BibliographicResource"
+      } ]
+    }
+  }, {
+    "frl:6376989" : {
+      "@id" : "frl:6376989",
+      "accessScheme" : "public",
+      "catalogId" : "ED6376989",
+      "contentType" : "part",
+      "isDescribedBy" : {
+        "@id" : "frl:6376989.rdf",
+        "created" : "2015-11-19T09:59:39.556+0000",
+        "createdBy" : "1",
+        "describes" : "frl:6376989",
+        "modified" : "2015-11-19T09:59:52.216+0000",
+        "name" : "frl:6376989",
+        "objectTimestamp" : "2015-11-19T09:59:52.216+0000"
+      },
+      "isMemberOf" : [ {
+        "prefLabel" : "info:fedora/oai:open_access",
+        "@id" : "info:fedora/oai:open_access"
+      }, {
+        "prefLabel" : "info:fedora/oai:part",
+        "@id" : "info:fedora/oai:part"
+      } ],
+      "itemID" : [ {
+        "prefLabel" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376989",
+        "@id" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376989"
+      } ],
+      "parentPid" : "frl:6376984",
+      "primaryTopic" : "frl:6376989",
+      "publishScheme" : "public",
+      "title" : [ "test" ],
+      "transformer" : [ ],
+      "type" : [ {
+        "prefLabel" : "Bibliografische Ressource",
+        "@id" : "http://purl.org/dc/terms/BibliographicResource"
+      } ]
+    }
+  } ],
+  "inSeries" : [ {
+    "prefLabel" : "genid-137c4b08eeca40dd935a3604fef63c92-genid2df877cd90951c4f55a73a6ed3b65193152dnode1a5h8h75rx1",
+    "@id" : "genid-137c4b08eeca40dd935a3604fef63c92-genid2df877cd90951c4f55a73a6ed3b65193152dnode1a5h8h75rx1"
+  } ],
+  "institution" : [ {
+    "prefLabel" : "Länderausschuss für Arbeitsschutz und Sicherheitstechnik",
+    "@id" : "http://d-nb.info/gnd/2149408-3"
+  } ],
+  "isDescribedBy" : {
+    "@id" : "frl:6376984.rdf",
+    "created" : "2015-11-19T09:57:19.981+0000",
+    "createdBy" : "1",
+    "describes" : "frl:6376984",
+    "modified" : "2015-12-02T11:51:46.774+0000",
+    "objectTimestamp" : "2015-11-19T10:00:33.000+0000"
+  },
+  "isLike" : [ {
+    "prefLabel" : "http://dx.doi.org/10.4126/FRL01-005826440",
+    "@id" : "http://dx.doi.org/10.4126/FRL01-005826440"
+  } ],
+  "isMemberOf" : [ {
+    "prefLabel" : "info:fedora/oai:340",
+    "@id" : "info:fedora/oai:340"
+  }, {
+    "prefLabel" : "info:fedora/oai:610",
+    "@id" : "info:fedora/oai:610"
+  }, {
+    "prefLabel" : "info:fedora/oai:open_access",
+    "@id" : "info:fedora/oai:open_access"
+  }, {
+    "prefLabel" : "info:fedora/oai:aleph",
+    "@id" : "info:fedora/oai:aleph"
+  }, {
+    "prefLabel" : "info:fedora/oai:frl01",
+    "@id" : "info:fedora/oai:frl01"
+  }, {
+    "prefLabel" : "info:fedora/oai:journal",
+    "@id" : "info:fedora/oai:journal"
+  } ],
+  "isPrimaryTopicOf" : [ {
+    "prefLabel" : "http://193.30.112.134/F/?func=find-c&ccl_term=IDN%3DHT018418282",
+    "@id" : "http://193.30.112.134/F/?func=find-c&ccl_term=IDN%3DHT018418282"
+  } ],
+  "isbn" : [ "9783936415780" ],
+  "issued" : [ "2014" ],
+  "itemID" : [ {
+    "prefLabel" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376984",
+    "@id" : "oai:api.ellinet-dev.hbz-nrw.de:frl:6376984"
+  } ],
+  "language" : [ {
+    "prefLabel" : "deutsch",
+    "@id" : "http://id.loc.gov/vocabulary/iso639-2/deu"
+  } ],
+  "medium" : [ {
+    "prefLabel" : "Datenträger",
+    "@id" : "http://rdvocab.info/termList/RDACarrierType/1010"
+  }, {
+    "prefLabel" : "Online-Ressource",
+    "@id" : "http://rdvocab.info/termList/RDACarrierType/1018"
+  } ],
+  "nameOfContributingCorporateBody" : [ "LASI", "Länderausschuss für Arbeitsschutz und Sicherheitstechnik" ],
+  "parallelEdition" : [ {
+    "prefLabel" : "Bußgeldkataloge zum Arbeitszeit-, zum Jugendarbeitsschutz- und zum Mutterschutzrecht",
+    "@id" : "http://lobid.org/resource/HT018418282"
+  } ],
+  "placeOfPublication" : [ "Hamburg" ],
+  "primaryTopic" : "frl:6376984",
+  "publicationStatement" : [ "Hamburg; LASI; 2014" ],
+  "publishScheme" : "public",
+  "publisher" : [ "LASI" ],
+  "redaktor" : [ {
+    "prefLabel" : "Höfer, Ursula",
+    "@id" : "http://d-nb.info/gnd/131928007"
+  } ],
+  "sameAs" : [ {
+    "prefLabel" : "http://hub.culturegraph.org/resource/HBZ-HT018418282",
+    "@id" : "http://hub.culturegraph.org/resource/HBZ-HT018418282"
+  } ],
+  "statementOfResponsibility" : [ "Länderausschuss für Arbeitsschutz und Sicherheitstechnik, LASI. [Verantw.: Ursula Höfer]" ],
+  "subject" : [ {
+    "prefLabel" : "Recht",
+    "@id" : "http://dewey.info/class/340/"
+  }, {
+    "prefLabel" : "Medizin und Gesundheit",
+    "@id" : "http://dewey.info/class/610/"
+  } ],
+  "title" : [ "Bußgeldkataloge zum Arbeitszeit-, zum Jugendarbeitsschutz- und zum Mutterschutzrecht" ],
+  "titleKeyword" : [ "Arbeitszeitrecht, Jugendarbeitsschutzrecht" ],
+  "transformer" : [ "oaidc", "aleph", "mets", "rdf" ],
+  "type" : [ {
+    "prefLabel" : "Report",
+    "@id" : "http://purl.org/lobid/lv#Miscellaneous"
+  } ],
+  "volume" : [ "60" ]
+}
