@@ -1,7 +1,24 @@
+
+/*Copyright (c) 2015 "hbz"
+
+This file is part of ebooky.
+
+ebooky is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.ByteArrayInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,52 +31,39 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
 import javax.net.ssl.HttpsURLConnection;
 
 import org.apache.commons.codec.binary.Base64;
-import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.auth.AuthScope;
-import org.apache.http.auth.Credentials;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
-import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.entity.ContentType;
-import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.BasicCredentialsProvider;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.json.JSONObject;
-import org.junit.*;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.fasterxml.jackson.core.JsonPointer;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
+@SuppressWarnings("javadoc")
 public class UploadTest {
 
 	static String user = "edoweb-admin";
@@ -84,7 +88,7 @@ public class UploadTest {
 	@Test
 	public void uploader_test() {
 
-		Uploader up = new Uploader("/home/raul/test/regal-mirror1");
+		Uploader up = new Uploader("/home/raul/test/frl%3A6376984");
 
 	}
 
@@ -737,6 +741,25 @@ public class UploadTest {
 			throw new RuntimeException(e);
 		}
 
+	}
+
+	@Test
+	public void dir_arr_tst() {
+		File file = new File("/home/raul/test/frl%3A6376984");
+		File[] files = file.listFiles();
+		int n = foundDatadirs(files);
+		System.out.println(n);
+	}
+
+	private int foundDatadirs(File[] files) {
+		int n = 0;
+		for (int i = 0; i < files.length; i++) {
+			if (files[i].getName().endsWith(".json")) {
+				n++;
+				System.out.println(n);
+			}
+		}
+		return n;
 	}
 
 }

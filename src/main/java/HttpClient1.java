@@ -1,3 +1,21 @@
+
+/*Copyright (c) 2015 "hbz"
+
+This file is part of ebooky.
+
+ebooky is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,21 +26,33 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Properties;
 
 import org.apache.commons.codec.binary.Base64;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+/**
+ * @author Raul Vasi
+ *
+ */
 public class HttpClient1 {
 	Properties prop = new Properties();
 	URL url;
 	HttpURLConnection httpConn;
 	String basicAuth;
 	String userpass;
+	final static Logger logger = LoggerFactory.getLogger(HttpClient1.class);
 
+	/**
+	 * Constructor to initialize the connection
+	 * 
+	 * @param action
+	 *            includin a String value of Namespace, ID, /Data etc..
+	 */
 	public HttpClient1(String action) {
 		loadProperties();
 		setURL(action);
@@ -41,7 +71,7 @@ public class HttpClient1 {
 	private void setURL(String action) {
 		try {
 			url = new URL(prop.getProperty("Upload.URL") + File.separator + action);
-			System.out.println(url);
+
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -55,11 +85,19 @@ public class HttpClient1 {
 		}
 		userpass = prop.getProperty("user") + ":" + prop.getProperty("password");
 		basicAuth = "Basic " + new String(new Base64().encode(userpass.getBytes()));
-		System.out.println(userpass);
 		httpConn.setRequestProperty("Authorization", basicAuth);
 	}
 
+	/**
+	 * Methode to creating and uploading a new json Object
+	 * 
+	 * @param contentType
+	 * @param accessScheme
+	 * @param publishScheme
+	 * @param parentPid
+	 */
 	public void newObject(String contentType, String accessScheme, String publishScheme, String parentPid) {
+
 		httpConn.disconnect();
 		String content;
 		if (parentPid != null) {
@@ -67,8 +105,7 @@ public class HttpClient1 {
 		} else {
 			content = "{" + contentType + "," + accessScheme + "," + publishScheme + "}";
 		}
-
-		System.out.println(content);
+		logger.info("PUT object on " + url + " as: " + prop.getProperty("user") + " with content: " + content);
 
 		httpConn.setRequestProperty("Content-Type", "application/json");
 		httpConn.setRequestProperty("Accept", "application/json");
@@ -90,7 +127,7 @@ public class HttpClient1 {
 		}
 
 		try {
-			System.out.println(httpConn.getResponseCode());
+			logger.info("Server respond: " + httpConn.getResponseCode() + " , " + httpConn.getResponseMessage() + "\n");
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -98,6 +135,11 @@ public class HttpClient1 {
 
 	}
 
+	/**
+	 * Methode to upload a data file.
+	 * 
+	 * @param uploadFile
+	 */
 	public void putData(File uploadFile) {
 		String fileName = uploadFile.getName();
 		String fieldName = "data";
@@ -109,7 +151,9 @@ public class HttpClient1 {
 		httpConn.setUseCaches(false);
 		httpConn.setDoOutput(true);
 		httpConn.setDoInput(true);
-
+		logger.info("PUT Data file on " + url);
+		logger.info("Uploading Data file: " + uploadFile);
+		logger.info("Writing header:" + httpConn.getRequestProperties());
 		try {
 			httpConn.setRequestMethod("PUT");
 		} catch (ProtocolException e1) {
@@ -129,17 +173,16 @@ public class HttpClient1 {
 			e.printStackTrace();
 		}
 		String LINE_FEED = "\r\n";
-
+		logger.debug("Writing body");
 		writer.append("--" + boundary).append(LINE_FEED);
-		System.out.println("--" + boundary + (LINE_FEED));
+		logger.debug("Boundary: " + boundary);
 		writer.append("Content-Disposition: form-data; name=\"" + fieldName + "\"; filename=\"" + fileName + "\"")
 				.append(LINE_FEED);
-		System.out.println("Content-Disposition: form-data; name=\"" + fieldName + "\"; filename=\"" + fileName + "\""
-				+ (LINE_FEED));
+		logger.debug("Content-Disposition: form-data; name=\"" + fieldName + "\"; filename=\"" + fileName + "\"");
 		writer.append("Content-Type: " + URLConnection.guessContentTypeFromName(fileName)).append(LINE_FEED);
-		System.out.println("Content-Type: " + URLConnection.guessContentTypeFromName(fileName) + (LINE_FEED));
+		logger.debug("Content-Type: " + URLConnection.guessContentTypeFromName(fileName));
 		writer.append("Content-Transfer-Encoding: binary").append(LINE_FEED);
-		System.out.println("Content-Transfer-Encoding: binary" + (LINE_FEED));
+		logger.debug("Content-Transfer-Encoding: binary");
 		writer.append(LINE_FEED);
 
 		writer.flush();
@@ -157,8 +200,7 @@ public class HttpClient1 {
 		httpConn.disconnect();
 
 		try {
-			System.out.println(httpConn.getResponseCode());
-			System.out.println(httpConn.getResponseMessage());
+			logger.info("Server respond: " + httpConn.getResponseCode() + " , " + httpConn.getResponseMessage() + "\n");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -190,7 +232,14 @@ public class HttpClient1 {
 
 	}
 
+	/**
+	 * Methode to upload a Metadata file
+	 * 
+	 * @param file
+	 */
 	public void addMetadata(File file) {
+		logger.info("PUT Metadata on " + url + " as: " + prop.getProperty("user"));
+		logger.info("Uploading Metadata file: " + file);
 		httpConn.setRequestProperty("content-type", "text/plain; charset=utf-8");
 		httpConn.setDoOutput(true);
 		try {
@@ -220,7 +269,7 @@ public class HttpClient1 {
 		httpConn.disconnect();
 
 		try {
-			System.out.println(httpConn.getResponseCode());
+			logger.info("Server respond: " + httpConn.getResponseCode() + " , " + httpConn.getResponseMessage() + "\n");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
