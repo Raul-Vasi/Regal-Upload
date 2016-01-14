@@ -1,0 +1,25 @@
+h1. Regal-Uploader
+
+A small tool to upload objects and files via HTTP-requests
+
+Supports
+- url
+- pdf's
+- json files 
+
+h1. Requirements
+
+1. Java 8
+
+h2. Download
+
+bc.. cd /tmp
+git clone https://github.com/Raul-Vasi/Regal-Upload
+cd Regal-Upload
+
+that's all! Repeating requests will be answered with a cached version using 'url' and 'size' as cache address.
+
+h1. License
+
+GNU AFFERO GENERAL PUBLIC LICENSE 
+Version 3, 19 November 2007
